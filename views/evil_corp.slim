@@ -1,3 +1,13 @@
 /Bygg sidan här. Efterlikna filen contacts.html
-- @data.each do |person|
-  article 
+div class="wrapper"
+  header 
+    h1 EVIL CORP
+  - @data.each do |person|
+    article class="user_card"
+      div class="profile-img"
+        img src="img/#{person["img_src"]}.jpg" alt="#{person["name"]}"
+      div class="info"
+        lable class="name" = person["name"]
+        lable class="email" = person["mail"]
+        lable class="tel" = person["phone"]
+        lable class="department" = person["department"]
